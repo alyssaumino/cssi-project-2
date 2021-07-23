@@ -1,0 +1,77 @@
+.charts{
+  display: flex;
+  text-align: center;
+  margin: auto;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.charts div{
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.disappear{
+  display: none;
+}
+
+.sec1 {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.Time {
+  padding-top: 4rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.inputs {
+  text-align: center;
+  position: fixed;
+  top: clamp(2rem, 2%, 5rem);
+  right: clamp(1rem, 2%, 2rem);
+  padding: 1rem;
+  
+}
+
+.inputs button {
+  padding: 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  transition: linear all 0.2s;
+}
+
+.inputs button:hover{
+  cursor: pointer;
+  color: white;
+  background-color: #3298dc;
+}
+
+
+div { 
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: auto;
+}
+
+div div {
+  flex: 1;
+}
+
+div div canvas {
+  flex: 1;
+  width: 50%;
+  border: solid 1px black;
+  border-radius: 1rem;
+}
