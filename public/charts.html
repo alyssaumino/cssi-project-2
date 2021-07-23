@@ -67,6 +67,14 @@
     <script src="/script.js" defer></script>
   </head>
   <body> 
+  <main>
+      <section class="inputs">
+        <button class="is-outlined animate__animated animate__bounceInDown animate__delay-1s" onclick="window.open('template.html','_self')" >
+          Return to Home
+        </button>
+      </section>
+    </main>
+    
   <main class="charts">
     <div class = "inputInput">
       <input type="checkbox" id="a" name="chart" value="doughtnut"
@@ -90,6 +98,7 @@
     </div>
     
   </main>
+  
   <div>
     
       <div class="doughtnut">
@@ -120,10 +129,10 @@
 
     <script >
     const data = {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: ['7/23', '7/24', '7/25', '7/26', '7/27', '7/28'],
             datasets: [{
                 label: '# of Calories',
-                data: [12, 19, 3, 5, 2, 3],
+                data: [2452, 3113, 1913, 2642, 2490, 2309],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
