@@ -20,6 +20,20 @@ for (const check of otherCheckbox){
   })
 }
 
+const messagesRef = firebase.database().ref();
+messagesRef.on("value", (snapshot) => {
+    const data = snapshot.val();
+    //console.log(data);
+    
+    let array = [];
+  
+    for(let key in data) {
+      console.log(data[key].date, data[key].calories);
+    }
+  
+  
+})
+
 
 const d = new Date();
 const time = document.querySelector("#Time");
@@ -31,8 +45,8 @@ const dateString = year + " / " + month + " / " + day;
 time.innerHTML = dateString;
 
 function update() {
-  let caloriesField = document.querySelector("#calorieField");
-  let caloriesInput = parseInt(caloriesField.value);
+  const caloriesField = document.querySelector("#calorieField");
+  const caloriesInput = parseInt(caloriesField.value);
   
   const messagesRef = firebase.database().ref();
   messagesRef.on("value", (snapshot) => {
