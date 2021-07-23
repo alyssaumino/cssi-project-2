@@ -36,7 +36,7 @@
 .inputs {
   text-align: center;
   position: fixed;
-  top: clamp(2rem, 2%, 5rem);
+  bottom: clamp(2rem, 2%, 5rem);
   right: clamp(1rem, 2%, 2rem);
   padding: 1rem;
   
