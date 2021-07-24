@@ -1,12 +1,4 @@
-// const d = new Date();
-// const time = document.querySelector("#Time");
-// const year = d.getFullYear();
-// const month = d.getMonth() + 1;
-// const day = d.getDate();
-
-// const date = year + " / " + month + " / " + day;
-// time.innerHTML = date;
-
+// allow for checkbox functionality when displaying the different types of graphical representations of the data
 let otherCheckbox = document.querySelectorAll('input[name="chart"]');
 for (const check of otherCheckbox){
   check.addEventListener('click', () => {
@@ -20,21 +12,21 @@ for (const check of otherCheckbox){
   })
 }
 
+//create a snapshot of the current state of the database in Firebase
 const messagesRef = firebase.database().ref();
 messagesRef.on("value", (snapshot) => {
     const data = snapshot.val();
     //console.log(data);
     
+    //allow graphs and charts to update real time based on user input
     let array = [];
   
     for(let key in data) {
       console.log(data[key].date, data[key].calories);
     }
-  
-  
 })
 
-
+//update the database in Firebase according to user input (of calories) as well as the current date
 const d = new Date();
 const time = document.querySelector("#Time");
 const year = d.getFullYear();
@@ -62,21 +54,3 @@ function update() {
   
   caloriesField.innerHTML = "";
 }
-
-
-// function update() {
-//   let calories = document.querySelector("#calorieField").value;
-  
-//   const messagesRef = firebase.database().ref();
-//   messagesRef.on("value", (snapshot) => {
-//         const data = snapshot.val();
-//   })
-  
-//   const payload = {
-//       date: date,
-//       calories: calories
-//   }
-//   firebase.database().ref().push(payload);
-  
-//   calories = "";
-// }
